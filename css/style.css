@@ -1,0 +1,17 @@
+/* Empty. Add your own CSS if you like */
+
+.pop-bg,#pop-bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index:60;
+    background-color: rgba(0,0,0,0.8);
+}
+.pop-bg img{
+    position:absolute;
+    top:10px;
+    right:30px;
+    width:60%;
+}

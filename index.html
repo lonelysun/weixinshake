@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+     <!-- jQuery -->
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!--weixin-->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+     <script src="lib/jquery/public/shake.js"></script>
+     <script src="lib/angular/qrcode.js"></script>
+     <script src="lib/angular/angular-qrcode.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--<script src="cordova.js"></script>-->
+     <!-- lazyload -->
+    <script src="lib/angular/oclazyload/dist/ocLazyLoad.js"></script>
+
+
+
+    <!-- your app's js -->
+    <script src="js/app.js?v=20151104"></script>
+    <script src="js/controllers.js?v=20150109"></script>
+    <script src="js/services.js?v=20151102"></script>
+    <!-- common services -->
+    <script src="js/common/common-services.js?v=20151102"></script>
+	<script src="js/wcOverlay.js"></script>
+
+
+  </head>
+
+  <body ng-app="weixin">
+    <ion-nav-view></ion-nav-view>
+     <div class="pop-bg" style="display:none">
+        <img ng-src="img/phone/share_tip.png" />
+    </div>
+    
+    <div wc-overlay wc-overlay-delay="30">
+        <i class="fa fa-spin fa-refresh fa-2x"></i>
+    </div>
+
+  </body>
+</html>

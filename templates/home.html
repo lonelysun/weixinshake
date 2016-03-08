@@ -1,0 +1,66 @@
+<ion-view view-title="摇一摇送卡券" class="item-home" ng-controller="HomeCtrl">
+	<ion-content scroll="false">
+		<input type="hidden" value="1" id='temp_type'/>
+	  	<div class="one">
+		    <div class="content">
+		        <div class="center">
+		            <img class="round" ng-src="img/home/round.png" alt=""/>
+		            <div>
+		                <img class="top" ng-src="img/home/top.png" alt=""/>
+		                <div class="hand"><img  ng-src="img/home/hand.png" alt=""/></div>
+		                <div class="things">
+		                    <img class="o hb" ng-src="img/home/hb.png" alt=""/>
+		                    <img class="o q" ng-src="img/home/q.png" alt=""/>
+		                    <img class="o lw" ng-src="img/home/lw.png" alt=""/>
+		                    <img class="o yy" ng-src="img/home/yy.png" alt=""/>
+		                    <img class="o dy" ng-src="img/home/dy.png" alt=""/>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="bottom">
+		            <img  ng-src="img/home/bottom.png" alt=""/>
+		            <span id="test">摇一摇</span>
+		        </div>
+		        <div class="cloud">
+		            <img class="cloud1" ng-src="img/home/cloud1.png" alt=""/>
+		            <img class="cloud2" ng-src="img/home/cloud2.png" alt=""/>
+		            <img class="cloud4" ng-src="img/home/cloud1.png" alt=""/>
+		            <img class="cloud3" ng-src="img/home/cloud3.png" alt=""/>
+		        </div>
+		    </div>
+		    <a class="myaward" ng-click="getMyCard()"><span>我的卡券</span><img ng-src="img/home/arrow1.png" alt=""/></a>
+		    <div class="des">
+		        活动规则
+		    </div>
+		</div>
+		<div class="two" style="height:181px">
+		    <div class="description">
+		        <p style="color:#fff"> 用户在参与活动的店家10米范围内打开手机蓝牙-微信摇一摇即有机会摇到店家提供的优惠券。
+		        每位用户在每家店可尝试多次摇一摇，有机会获得多重好礼。
+		        摇到相关优惠券后只需关注微信公众号“微卡最美生活”后即可在次公众号内“我的卡券”中查看使用。
+		        关于券的使用有任何问题可直接咨询相关店家。
+		        </p>
+		    </div>
+		</div>
+
+		<!--摇到优惠券或者红包弹窗-->
+		<div class="pop pop_1 none"  id="get_award_notice" ng-click="getPhone()">
+		    <div>
+		        <img ng-src="img/home/default_logo.jpeg" alt=""  id="notice_img"/>
+		        <div>
+		           <p id="notice_p"></p>
+		            <p class="kaquan " id="notice_kaquan">给您发了张卡券</p>
+		            <p class="actpage  " id="notice_page">{{userinfo.data.cardInfo.product_name}}</p>
+		        </div>
+		        <img src="lib/jquery/public/images/yao_pop/arrow3.png" alt=""/>
+		    </div>
+		</div>
+		<!--奖品领完弹窗-->
+		<div class="pop pop_2 none"  id="get_award_none">
+		    <img src="lib/jquery/public/images/yao_pop/face.png" alt=""  />
+		    <div id="pop_2_message">{{userinfo.message}}</div>
+		    <img src="lib/jquery/public/images/yao_pop/close_white.png" alt="" ng-click="close('pop_2')" class="close close1"/>
+		</div>
+		<!--优惠券详情弹窗-->
+  	</ion-content>
+</ion-view>

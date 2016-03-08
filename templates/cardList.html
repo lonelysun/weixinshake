@@ -1,0 +1,81 @@
+<ion-view view-title="卡券列表" class="item-phone">
+  <ion-content >
+
+	<div style="">
+
+		<div class="panel-list panel-default">
+
+			<div class="list-group no-radius alt" ng-repeat="row in list">
+
+                <a class="list-group-item-card" ng-href='#/app/card/{{row.id}}' ng-if="row.status<=1">
+					<div class="col wrapper">
+						<div class="pull-left thumb-sm" style="   width: 70px; background: url(img/phone/border.png) repeat-x bottom;   background-size: 1px 4px;   height: 70px; padding: 5px;background-color: #FFF;border-top-left-radius: 10px;">
+                            <img ng-src="{{row.square_image ==''?row.image_url:row.square_image}}" alt="" class="notice_img" style="width: 50px;height: 50px;margin: auto;">
+						</div>
+					</div>
+					<div class="col-left wrapper">
+                        <div class="block m-t-sm-list" style="font-size:18px;margin-left:5px;text-align:left;">{{row.card_name}}</div>
+                        <div class="block m-t-m-list" style="margin-left:5px;text-align:left;">{{row.cname}}
+                         <span style="float:right;margin-right:10px;">{{row.created}}</span>
+                        </div>
+					</div>
+
+				</a>
+                <a class="list-group-item-card card-8" ng-href='#/app/card/{{row.id}}' ng-if="row.status ==8">
+                    <div class='tag'>
+						<img src="img/status/8.png" alt="">
+					</div>
+
+					<div class="col wrapper">
+						<div class="pull-left thumb-sm" style="   width: 70px; background: url(img/phone/border.png) repeat-x bottom;   background-size: 1px 4px;   height: 70px; padding: 5px;background-color: #FFF;border-top-left-radius: 10px;">
+                            <img ng-src="{{row.square_image ==''?row.image_url:row.square_image}}" alt="" class="notice_img" style="width: 50px;height: 50px;margin: auto;">
+						</div>
+					</div>
+					<div class="col-left wrapper">
+                        <div class="block m-t-sm-list" style="margin-left:5px;text-align:left;">{{row.card_name}}</div>
+                        <div class="block m-t-m-list" style="margin-left:5px;text-align:left;">{{row.cname}}
+                        <span style="float:right;margin-right:10px;">{{row.created}}</span>
+                        </div>
+					</div>
+
+				</a>
+
+
+			</div>
+
+            	<div class="no-card" ng-if="list ==''">
+                    <img ng-src="img/phone/no-card.png" />
+                    <h1>您的卡包空空如也</h2>
+				
+				</div>
+
+
+
+
+
+		</div>
+
+		<div class="fixed none">
+			<div class="returnbt none">返回</div>
+			<div class="cancelbt none">取消</div>
+			<div class="deletebt">删除</div>
+		</div>
+	</div>
+	<div class="red ">
+		<ul>
+		</ul>
+	</div>
+
+	<footer> </footer>
+
+	<div class="pop confirm none">
+		<p>是否清空失效优惠券？</p>
+		<div>
+			<div class="sure">确认</div>
+			<div class="cancel">取消</div>
+		</div>
+	</div>
+	<!--yao_public_model静态弹窗 begin-->
+	
+  </ion-content>
+</ion-view>

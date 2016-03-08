@@ -1,0 +1,76 @@
+<ion-view view-title="卡券详情" class="item-phone">
+	  
+		
+		
+		<div ng-show="cardDetail.subscribe==0" style="padding:0px;">
+			<div class="panel panel-default">
+				<div class="text-center " style="position:relative;margin-bottom:0px;" >
+				 	<img  style="width:100%;margin: auto;" alt="" src="img/card/top.png">
+					<div style="color:#ffffff;width:100%;left:0px;position:absolute;bottom:10%;font-size:18px;">
+					{{cardDetail.product_name}}
+					</div>
+				</div>
+				<div class="text-center" >
+					 <img  style="width:100%; margin: auto;" alt="" src="img/card/code.png">
+				</div>
+				<div class="text-center" style="color:#ffffff;margin-top:10px;">
+					<p >长按指纹识别二维码，关注公众号“微卡最美生活”</p>
+					<p>即可查看和使用优惠券！</p>
+				</div>
+				
+				<div class="text-center" style="color:#ffffff;margin-top:10px;">
+					<a class="text-info"  href="http://mp.weixin.qq.com/s?__biz=MzAwNDczMzA3Mw==&mid=400148120&idx=1&sn=fb0fd2661b305b72d0beabe8f7688f60#wechat_redirect"> <i class="fa fa-chevron-right chevron-right"></i> 点击链接关注公众号
+					</a>
+				</div>
+				<div class="text-center" style="margin-top:56px;" >
+					 <img  style="width:33%;margin: auto;" alt="" src="img/card/logo.png">
+				</div>
+			</div>
+		</div>
+		
+		 <ion-content scorll="false"  ng-if="cardDetail.subscribe==1"  >
+		<div style="padding: 20px;margin-bottom:30px;" ng-if="cardDetail.subscribe==1">
+			<div class="panel panel-default">
+            	<div ng-if="cardDetail.rectangle_image !=''" class="panel-heading-img" style="height: 160px;background-image: url('{{cardDetail.rectangle_image}}');background-size: cover"></div>
+                <div class="panel-heading" ng-if="cardDetail.rectangle_image ==''">
+					<div class="text-center wrapper m-b-sm">
+						<div style="padding: 35px 0px;">
+	                        <img ng-src="{{cardDetail.image_url}}" alt="" id="notice_img" style="width: 70px;height: 70px;margin: auto;">
+						</div>
+	                </div>
+            	</div>
+				<div class="panel-body">
+					<div class="text-center wrapper m-b-sm">
+						<div style="padding: 10px 0px;">
+							<ul class="list-group-sm list-group-sp list-group-alt auto m-t list-group-font">
+	                            <li class="list-group-item-info"><span class="text-muted" style="font-size: 20px;">{{cardDetail.product_name}}</span></li>
+	                            <li class="list-group-item-info"><span class="text-muted">{{cardDetail.company_name}}</span></li>
+	                             <li class="list-group-item-info"><span class="text-muted">{{cardDetail.card_no}}</span></li>
+								<li class="list-group-item-info" style="padding: 10px 0;">
+	                            <a ng-if="cardDetail.status != 8" href='#/app/cardqrcode/{{cardDetail.id}}' class="btn btn-use">立即使用</a>
+	                            <div ng-if="cardDetail.status == 8"  class="btn btn-nouse">卡券已失效</div>
+								</li>
+	                            <li class="list-group-item-info"><span class="text-muted">有效期:{{cardDetail.expired_date}}</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="list-group no-radius alt">
+	                <a class="list-group-item" href="#/app/carddetail/{{cardDetail.id}}"> <i class="fa fa-chevron-right chevron-right"></i> 详细信息
+					</a> 
+					<a class="list-group-item" href="http://mp.weixin.qq.com/s?__biz=MzAwNDczMzA3Mw==&mid=400148120&idx=1&sn=fb0fd2661b305b72d0beabe8f7688f60#wechat_redirect"> <i class="fa fa-chevron-right chevron-right"></i> 关注公众号
+					</a> 
+					<a class="list-group-item" href="#/app/follow"> <i class="fa fa-chevron-right chevron-right"></i> 识别二维码 
+					</a> 
+					<a class="list-group-item" ng-if="cardDetail.status  <= 1 && cardDetail.need_share != 2" ng-click="sendFriend()"> <i class="fa fa-chevron-right chevron-right"></i> 转赠好友
+	                </a>
+				</div>
+				<div style="padding-bottom: 1px;"></div>
+			</div>
+			<div style="padding-bottom: 20px;background-color: #FFF;border-bottom-right-radius: 10px;     border-bottom-left-radius: 10px;"></div>
+		</div>
+		
+		</ion-content>
+		
+	 
+</ion-view>

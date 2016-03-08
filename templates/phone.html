@@ -1,0 +1,155 @@
+<ion-view view-title="phone" class="item-phone" >
+  <ion-content scroll="false">
+
+	<div style="padding:60px 20px 20px 20px; ">
+
+
+		<div class="panel panel-default">
+			<div class="div-a" style="
+    position: absolute;
+    background-color: #FFF;
+    width: 50%;
+    height: 22px;
+    top: 38px;
+    left:25%;
+    filter: alpha(opacity=55);
+    opacity: 0.55;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+"></div>
+			<div class="div-a" style="
+    position: absolute;
+    background-color: #FFF;
+    width: 70%;
+    height: 13px;
+    top: 47px;
+    left:15%;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+"></div>
+
+
+			<div class="panel-heading-img2" style="height: 380px;position: relative;">
+				<div class="phone-page-body">
+
+
+					<div style="
+				/* position: absolute; */
+				background-color: #fff;
+				background: url(img/phone/pic1.png) no-repeat center top;
+				background-size: 261px;
+				height: 228px;
+">
+						<img style="/* margin: 40px  auto; */width: 95px;/* z-index: -1; *//* top: 90px; *//* position: absolute; */top: 30px;margin: 0 auto;padding-top: 70px;" src="img/phone/wevip-logo.png" alt="">
+
+					</div>
+
+
+
+					<div style="padding: 0px 0;/* margin: auto 0; */text-align: center;">
+
+<div class="list-group-item-input">
+
+<span class="pull-left thumb-sm-input"><i class="ion-iphone" style="font-size:25px"></i></span>
+<input placeholder="请输入您的手机号" class="form-control no-border" ng-pattern="/^1[3|4|5||7|8][0-9]\d{8}$/" ng-model="jform.phone">
+            </div>
+						<div style="padding: 10px 0;">
+						<a class="btn btn-use" ng-click="getCard()">马上领取</a>
+						</div>
+					</div>
+
+				</div>
+
+
+
+
+			</div>
+
+
+		</div>
+		<div style="padding-top: 30px; text-align: center;">
+			<a class="about-wevip" href="http://mp.weixin.qq.com/s?__biz=MzAwNDczMzA3Mw==&mid=400148120&idx=1&sn=fb0fd2661b305b72d0beabe8f7688f60#wechat_redirect"> 
+			关于微卡
+				</a>
+		</div>
+
+
+
+		<ul class="useless none">
+			<li class="couponslist">
+				<div class="left">
+					<img src="/born_wevip_activity/static/upload/image/338/20151026/1445829243362463.jpg" alt="">
+					<div>
+						<p>测试优惠券</p>
+						<p>这是测试</p>
+					</div>
+				</div> <img src="/born_wevip_activity/static/yao_alltemp/crazy_yao_temp2/images/border_gray.png" alt="">
+				<div class="right">
+					<div class="userd">已使用</div>
+				</div>
+			</li>
+		</ul>
+		<div class="fixed none">
+			<div class="returnbt none">返回</div>
+			<div class="cancelbt none">取消</div>
+			<div class="deletebt">删除</div>
+		</div>
+	</div>
+
+
+	<div class="red ">
+		<ul>
+		</ul>
+	</div>
+
+
+	<div class="pop confirm none">
+		<p>是否清空失效优惠券？</p>
+		<div>
+			<div class="sure">确认</div>
+			<div class="cancel">取消</div>
+		</div>
+	</div>
+	<!--yao_public_model静态弹窗 begin-->
+
+
+
+		<!--优惠券详情弹窗-->
+	<div class="pop couponsdetail none">
+		<div class="coupons_title">
+			<img src="" alt="" id="coupons_background_img" />
+			<div class="" id="coupons_conver"></div>
+			<img src="img/phone/yao_pop/get.png" alt="" />
+		</div>
+		<img src="img/phone/yao_pop/line.png" alt="" />
+		<div class="couponsdes" id="coupons_details">
+			<p id="coupons_details_eq0"></p>
+			<p id="coupons_details_eq1"></p>
+			<p id="coupons_details_eq2"></p>
+			<p id="coupons_details_eq3">商户地址</p>
+		</div>
+		<div class="coupons_detail">
+			<p id="coupons_detail_sn"></p>
+			<div id="code"></div>
+			<div>
+				<div class="btn" id="coupon_gzggzh">点击关注公众账号</div>
+				<div class="btn none" id="coupon_hx">核销</div>
+				<input type="hidden" id="coupon_sn" value="" />
+				<div class="two_btn none" style="">
+					<div id="c_sendto">转赠好友</div>
+				</div>
+				<div class="coupons_detail_de" id="coupons_detail"></div>
+			</div>
+		</div>
+		<div class="close_div">
+			<img src="img/phone/yao_pop/close_white.png" alt="" class="close close2" />
+		</div>
+	</div>
+	
+
+  </ion-content>
+
+</ion-view>
+

@@ -1,0 +1,78 @@
+<ion-view view-title="home" class="item-phone">
+  <ion-content scorll="false">
+
+	<div style="padding: 20px;">
+		<div class="panel panel-default">
+			<div class="panel-heading"></div>
+			<div class="list-group no-radius alt">
+				<div class="list-group-item">
+					<div class="media">
+						<span class="pull-left thumb-sm"><i class="icon-credit-card"></i></span>
+						<div class="media-body">
+							<div class="h4">可用金额</div>
+                            <span class="block m-t-sm" ng-if="cardDetail.money>0">￥{{cardDetail.money}}元</span>
+                            <span class="block m-t-sm" ng-if="cardDetail.course_money>0"> 疗程金额:￥{{cardDetail.course_money}}元</span>
+                            <span class="block m-t-sm" ng-if="cardDetail.discount>0 && cardDetail.discount<10">  到店消费享受{{cardDetail.discount}}折</span>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item">
+					<div class="media">
+						<span class="pull-left thumb-sm"><i class="icon-bag"></i></span>
+						<div class="media-body">
+							<div class="h4">可用项目</div>
+
+							<div class="h4">
+								<div class="list-group" ng-repeat="item in cardDetail.itemList">
+									<div href="" class="list-group-item-t"> 
+                                        {{item.item_name}} x{{item.left_count}}
+									</div> 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item">
+					<div class="media">
+						<span class="pull-left thumb-sm"><i class="icon-info"></i></span>
+						<div class="media-body">
+							<div class="h4">使用条款</div>
+							 
+							
+							<small class="block m-t-sm" data-ng-bind-html="cardDetail.remark" style=" font-size: 14px;"></small>
+							
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item">
+					<div class="media">
+						<span class="pull-left thumb-sm"><i class="icon-clock"></i></span>
+						<div class="media-body">
+							<div class="h4">有效期</div>
+                            <span class="block m-t-sm">{{cardDetail.expired_date}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item">
+					<div class="media">
+						<span class="pull-left thumb-sm"><i class="icon-pointer"></i></span>
+						<div class="media-body">
+							<div class="h4">商户地址</div>
+                            <span class="block m-t-sm">{{cardDetail.address}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item-1">
+					<div class="media">
+						<span class="pull-left thumb-sm"><i class="icon-call-end"></i></span>
+						<div class="media-body">
+							<div class="h4">商户电话</div>
+                            <span class="block m-t-sm"><a href="tel:{{cardDetail.phone}}" style="color: #A8B4c0;">{{cardDetail.phone}}</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>

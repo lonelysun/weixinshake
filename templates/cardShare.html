@@ -1,0 +1,52 @@
+<ion-view view-title="卡券赠送" class="item-phone">
+  <ion-content scorll="false">
+
+<div style="padding: 20px;">
+
+		<div class="panel panel-default">
+             <div ng-if="cardDetail.rectangle_image !=''" class="panel-heading-img" style="height: 160px;background-image: url('{{cardDetail.rectangle_image}}');background-size: cover">
+            </div>
+                <div class="panel-heading" ng-if="cardDetail.rectangle_image ==''">
+				<div class="text-center wrapper m-b-sm">
+					<div style="padding: 35px 0px;">
+                        <img ng-src="{{cardDetail.image_url}}" alt="" id="notice_img" style="width: 70px;height: 70px;margin: auto;">
+					</div>
+                </div>
+            </div>
+
+				
+			<div class="panel-body">
+				<div class="text-center wrapper m-b-sm">
+					<div style="padding: 10px 0px;">
+						<ul class="list-group-sm list-group-sp list-group-alt auto m-t list-group-font">
+                            <li class="list-group-item-info"><span class="text-muted" style="font-size: 20px;">{{cardDetail.product_name}}</span></li>
+                            <li class="list-group-item-info"><span class="text-muted">{{cardDetail.company_name}}</span></li>
+                            <li class="list-group-item-info"><span class="text-muted">有效期:{{cardDetail.expired_date}}</span></li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+                <div style="padding: 20px 0 0;/* margin: auto 0; */text-align: center;background-color:#fff;">
+
+<div class="list-group-item-input nh-input">
+
+<span class="pull-left thumb-sm-input"><i class="ion-iphone" style="font-size:25px"></i></span>
+<input placeholder="请输入您的手机号" class="form-control no-border" ng-pattern="/^1[3|4|5||7|8][0-9]\d{8}$/" ng-model="jform.phone">
+            </div>
+						<div style="padding: 10px 0;">
+						<a class="btn btn-use" ng-click="getCard()">马上领取</a>
+						</div>
+					</div>
+
+               
+
+		</div>
+		<div style="padding-bottom: 20px;background-color: #FFF;border-bottom-right-radius: 10px;     border-bottom-left-radius: 10px;"></div>
+
+
+	
+    	
+  </ion-content>
+ 
+</ion-view>

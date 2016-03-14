@@ -1,0 +1,56 @@
+<ion-view view-title="home" class="item-phone">
+  <ion-content scroll="false">
+
+<div style="margin: 5px;">
+
+		<div class="panel panel-default">
+            <div ng-if="cardDetail.rectangle_image !=''" class="panel-heading-img" style="height: 160px;background-image: url('{{cardDetail.rectangle_image}}');background-size: cover">
+            </div>
+                <div class="panel-heading" ng-if="cardDetail.rectangle_image ==''">
+				<div class="text-center wrapper m-b-sm">
+					<div style="padding: 35px 0px;">
+                        <img ng-src="{{cardDetail.image_url}}" alt="" id="notice_img" style="width: 70px;height: 70px;margin: auto;">
+					</div>
+
+				</div>
+
+
+            <!--/panel-->
+            </div>
+		    	<div class="panel-body">
+				<div class="text-center wrapper m-b-sm">
+					<div style="padding: 10px 0px;">
+						<ul class="list-group-sm list-group-sp list-group-alt auto m-t list-group-font">
+                            <li class="list-group-item-info">
+                            <span ng-if="cardDetail.money>0" class="text-muted" style="font-size: 20px;">{{cardDetail.money}}元代金券</span>
+                            <span ng-if="cardDetail.course_money>0" class="text-muted" style="font-size: 20px;">{{cardDetail.course_money}}元项目券</span>
+                            </li>
+                            <li class="list-group-item-info"><span class="text-muted">{{cardDetail.company_name}}</span></li>
+							<li class="list-group-item-info" style="padding: 20px 0;">
+                                <div style="margin: 6px auto;width: 150px;">
+                                    <qrcode  data="{{cardDetail.card_no}}" size="150"></qrcode>
+                                </div>
+                                <span style="font-size: 12px;color: #000;" class="text-muted">{{cardDetail.card_no}}</span>
+							</li>
+                            <li class="list-group-item-info"><span style="padding-bottom: 10px;" class="text-muted m-b">有效期:{{cardDetail.expired_date}}</span></li>
+						</ul>
+
+ 
+					</div>
+				</div>
+			</div>
+			
+
+		</div>
+		<div style="padding-bottom: 20px;background-color: #EAEFF2;border-bottom-right-radius: 10px;     border-bottom-left-radius: 10px;"></div>
+ 		</div>
+	 
+
+ 
+
+	 
+	 
+
+	
+  </ion-content>
+</ion-view>
